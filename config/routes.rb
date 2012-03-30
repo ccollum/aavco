@@ -1,4 +1,30 @@
 Aavco::Application.routes.draw do
+  resources :codes
+
+  resources :cities
+
+  resources :locations
+
+  resources :contacts
+
+  resources :links
+
+  resources :calculators
+
+  resources :forms
+
+  resources :events
+
+  resources :meetings
+
+  resources :services
+
+  resources :guidelines
+
+  resources :about_aas
+
+  resources :homes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

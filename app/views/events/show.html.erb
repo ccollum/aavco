@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Name link:</b>
+  <%= @event.name_link %>
+</p>
+
+<p>
+  <b>Dates:</b>
+  <%= @event.dates %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @event.location %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @event.info %>
+</p>
+
+<p>
+  <b>Order by:</b>
+  <%= @event.order_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

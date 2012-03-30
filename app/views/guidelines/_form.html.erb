@@ -1,0 +1,25 @@
+<%= form_for(@guideline) do |f| %>
+  <% if @guideline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guideline.errors.count, "error") %> prohibited this guideline from being saved:</h2>
+
+      <ul>
+      <% @guideline.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="pagetitle" width=100%>
+    <%= f.text_field :title %>
+  </div>
+  <div class="pagetext" width=100%>
+<br />
+    <%= f.text_area :page_text, :class=>"tinymce", :rows=>100, :cols=>300 %>
+    <%= tinymce %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

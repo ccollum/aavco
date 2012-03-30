@@ -1,0 +1,41 @@
+<h1>Listing meetings</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Days</th>
+    <th>Time</th>
+    <th>Title</th>
+    <th>Code</th>
+    <th>Vc</th>
+    <th>Gso</th>
+    <th>Location</th>
+    <th>Active</th>
+    <th>Day number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meetings.each do |meeting| %>
+  <tr>
+    <td><%= meeting.city %></td>
+    <td><%= meeting.days %></td>
+    <td><%= meeting.time %></td>
+    <td><%= meeting.title %></td>
+    <td><%= meeting.code %></td>
+    <td><%= meeting.vc_id %></td>
+    <td><%= meeting.gso_id %></td>
+    <td><%= meeting.location_id %></td>
+    <td><%= meeting.active %></td>
+    <td><%= meeting.day_number %></td>
+    <td><%= link_to 'Show', meeting %></td>
+    <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+    <td><%= link_to 'Destroy', meeting, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meeting', new_meeting_path %>

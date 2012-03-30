@@ -11,3 +11,90 @@
  *= require_self
  *= require_tree .
 */
+
+body
+ {
+	font-family: Arial;
+	color: #003399;
+	font-weight: 100;
+	text-align: left;
+	background-image: url(aa_gradient2.png);
+	background-repeat:repeat-y;
+	text-decoration:none;
+	}
+	
+#header {
+	margin-left: 50px;
+	padding-top: 10px;
+	padding-left: 0px;
+	}
+
+#date_bar {
+	margin-left: 200px ;
+	padding-left: 50px;
+	text-align: center;
+	font-family:Arial; 
+	color:#003399;
+	text-decoration:none;
+	}
+
+
+.bold {
+	font-size: 900;
+}
+	
+#logo_bar {
+	margin-left: 200px;
+	padding-left: 100px;
+	font-family:Arial ;
+	color:#003399;
+	text-decoration:none;
+	}
+
+
+nav {
+	margin-left:200px;
+	margin-right:auto;
+	padding-left:100px;
+	text-align: center;
+	font-family: Arial;
+	color: #003399;
+	font-size: 12px;
+	background-color:white;
+	text-decoration:none;
+	}
+nav ul {
+	height:20px;
+	padding-left: 100px;
+	margin-right:auto;
+	text-decoration:none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	display: block;
+	}
+nav ul li {
+	list-style-type: none;
+	height:18px;
+	text-decoration:none;
+	text-align:left;
+	display: inline-block;
+	padding: 1px,1px,1px,0;
+	margin-right: 3px;
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;  
+	background-color:#d7e8f4;
+	float: left;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	margin-top:2px;
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom:0px;
+	color: black;
+	font-weight:100;
+}

@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aavco</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	
 </head>
-<body>
+	<body>
+		<div id = "header">
+			<%=link_to(image_tag("big_book_of_alcoholics_anonymous.jpg", :height => "240", :width => "159", :align => "left", :border=>1), options = "http://www.aa.org/bigbookonline/" )%>	
 
-<%= yield %>
+			<p id="logo_bar" align="center"></br></br><i><font size="7" class="bold"><b>Alcoholics Anonymous</b></font></i><br />
+					<font size="5" > Ventura County's Central Service Office</font>
+					<br /></br> </font>
+					<font size="4"> Serving Ventura County and far western Los Angeles County</font><br />
+					</font>
+			</p>
+			<p id = "date_bar" align="center">
+					<script language="JavaScript" type="text/javascript">
+						<!--
+						// Array of day names
+						var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+						var monthNames = new Array("January","February","March","April","May","June","July", "August","September","October","November","December");
+						var dt = new Date();
+						var y  = dt.getYear();
+						// Y2K compliant
+						if (y < 1000) y +=1900;
+						document.write(dayNames[dt.getDay()] + ", " + monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + y);
+						// -->
+					</script>
+					</br></br>
+			</p>
+			<div id = "mainmenu" align="center">	
+			</div>	
+			<nav  align="center">
+				<ul>
+					<li><%= link_to "Home", '#' %>  </li>
+					<li><%= link_to "About AA", '#' %></li>
+					<li><%= link_to "Guidelines", '#' %></li>
+					<li><%= link_to "Service", '#' %></li>
+					<li><%= link_to "Meetings", '#' %></li>
+					<li><%= link_to "Calendar", '#' %></li>
+					<li><%= link_to "Events", '#' %></li>
+					<li><%= link_to "Forms", '#' %></li>
+					<li><%= link_to "Calculator", '#' %></li>
+					<li><%= link_to "Links", '#' %></li>
+					<li><%= link_to "Contact Us", '#' %></li>
+				</ul>
+			</nav>
+				
+				</br>
+			</div>
+			
+		</div>
 
-</body>
+		<%= yield %>
+
+	</body>
 </html>
