@@ -8,6 +8,7 @@ gem 'rails', '3.2.1'
 gem 'sqlite3'
 
 gem  'tinymce-rails'
+gem 'event-calendar', :require => 'event_calendar'
 
 group :development do
 	gem 'rspec-rails', '2.6.1'

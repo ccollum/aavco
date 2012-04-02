@@ -1,24 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @service.title %>
-</p>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<p>
-  <b>Page text:</b>
-  <%= @service.page_text %>
-</p>
-
-<p>
-  <b>Subtitle:</b>
-  <%= @service.subtitle %>
-</p>
-
-<p>
-  <b>Service meetings:</b>
-  <%= @service.service_meetings %>
-</p>
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @service.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @service.page_text %></td>
+		</tr>
+</table>
 
 
 <%= link_to 'Edit', edit_service_path(@service) %> |

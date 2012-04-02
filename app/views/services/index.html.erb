@@ -1,29 +1,17 @@
-<h1>Listing services</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Page text</th>
-    <th>Subtitle</th>
-    <th>Service meetings</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @services.each do |service| %>
-  <tr>
-    <td><%= service.title %></td>
-    <td><%= service.page_text %></td>
-    <td><%= service.subtitle %></td>
-    <td><%= service.service_meetings %></td>
-    <td><%= link_to 'Show', service %></td>
-    <td><%= link_to 'Edit', edit_service_path(service) %></td>
-    <td><%= link_to 'Destroy', service, confirm: 'Are you sure?', method: :delete %></td>
+<%= render 'layouts/stylesheets' %>
+</br></br>
+<table class='pagetext'>
+		<% @services.each do |service| %>
+	<tr>
+		<td class='pagetitle'><%= raw service.title %>
+		</td>
+	</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>&nbsp;&nbsp;</tr>
+	<tr>
+	</br></br>
+		<td class='pagetext'><%= raw service.page_text %>
+		</td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Service', new_service_path %>

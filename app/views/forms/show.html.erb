@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @form.title %>
-</p>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<p>
-  <b>Page text:</b>
-  <%= @form.page_text %>
-</p>
-
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @form.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @form.page_text %></td>
+		</tr>
+</table>
 
 <%= link_to 'Edit', edit_form_path(@form) %> |
 <%= link_to 'Back', forms_path %>

@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @guideline.title %>
-</p>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<p>
-  <b>Page text:</b>
-  <%= @guideline.page_text %>
-</p>
-
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @guideline.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @guideline.page_text %></td>
+		</tr>
+</table>
 
 <%= link_to 'Edit', edit_guideline_path(@guideline) %> |
 <%= link_to 'Back', guidelines_path %>

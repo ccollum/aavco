@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<p>
-  <b>Title:</b>
-  <%= @about_aa.title %>
-</p>
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @about_aa.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @about_aa.page_text %></td>
+		</tr>
+</table>
 
-<p>
-  <b>Page text:</b>
-  <%= @about_aa.page_text %>
-</p>
 
 
 <%= link_to 'Edit', edit_about_aa_path(@about_aa) %> |

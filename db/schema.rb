@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120329184242) do
+ActiveRecord::Schema.define(:version => 20120401014350) do
 
   create_table "about_aas", :force => true do |t|
     t.string   "title"
@@ -48,15 +48,28 @@ ActiveRecord::Schema.define(:version => 20120329184242) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "events", :force => true do |t|
+  create_table "current_events", :force => true do |t|
     t.string   "name"
-    t.string   "name_link"
+    t.string   "link"
     t.string   "dates"
     t.string   "location"
-    t.string   "info"
-    t.date     "order_by"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "information"
+    t.date     "orderby"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.boolean  "all_day",     :default => false
+    t.string   "event_type"
+    t.string   "title"
+    t.string   "description"
+    t.string   "category"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "forms", :force => true do |t|

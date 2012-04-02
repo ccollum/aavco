@@ -1,25 +1,16 @@
-<h1>Listing forms</h1>
+<p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Page text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<% @forms.each do |form| %>
-  <tr>
-    <td><%= form.title %></td>
-    <td><%= form.page_text %></td>
-    <td><%= link_to 'Show', form %></td>
-    <td><%= link_to 'Edit', edit_form_path(form) %></td>
-    <td><%= link_to 'Destroy', form, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<table class='pagetext'>
+	<% @forms.each do |form| %>
+		<tr>
+			<td class='pagetitle'><%=raw form.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw form.page_text %></td>
+		</tr>
+	<% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Form', new_form_path %>

@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Code:</b>
-  <%= @code.code %>
-</p>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<p>
-  <b>Description:</b>
-  <%= @code.description %>
-</p>
-
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @code.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @code.page_text %></td>
+		</tr>
+</table>
 
 <%= link_to 'Edit', edit_code_path(@code) %> |
 <%= link_to 'Back', codes_path %>

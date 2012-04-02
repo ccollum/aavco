@@ -4,13 +4,11 @@
 <table class='pagetext'>
 	<% @about_aas.each do |about_aa| %>
 		<tr>
-			<td class=pagetitle><%= about_aa.title %></td>
+			<td class="pagetitle"><%=raw about_aa.title %></td>
 		</tr>
 		<tr></tr><tr></tr>
 		<tr>
-			<td><%= about_aa.page_text %></td>
+			<td class="pagetext"><%=raw about_aa.page_text %></td>
 		</tr>
 		<% end %>
 </table>
-
-<br />

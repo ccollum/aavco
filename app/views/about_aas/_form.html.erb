@@ -2,7 +2,7 @@
   <% if @about_aa.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@about_aa.errors.count, "error") %> prohibited this about_aa from being saved:</h2>
-
+		
       <ul>
       <% @about_aa.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,15 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :page_text %><br />
-    <%= f.text_area :page_text %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="pagetitle" width=100%>
+		<%= f.text_field :title %>
+	</div>
+	<div class="pagetext" width=100%>
+		<br />
+		<%= f.text_area :page_text, :class=>"tinymce", :rows=>100, :cols=>300 %>
+		<%= tinymce %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
 <% end %>
+

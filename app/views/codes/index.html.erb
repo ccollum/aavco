@@ -1,25 +1,19 @@
-<h1>Listing codes</h1>
+<p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Code</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render 'layouts/stylesheets' %>
+</br></br>
 
-<% @codes.each do |code| %>
-  <tr>
-    <td><%= code.code %></td>
-    <td><%= code.description %></td>
-    <td><%= link_to 'Show', code %></td>
-    <td><%= link_to 'Edit', edit_code_path(code) %></td>
-    <td><%= link_to 'Destroy', code, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<table class='pagetext'>
+	<% @codes.each do |code| %>
+		<tr>
+			<td class='pagetitle'><%=raw code.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw code.page_text %></td>
+		</tr>
+	<% end %>
 </table>
-
 <br />
 
 <%= link_to 'New Code', new_code_path %>

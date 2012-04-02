@@ -1,4 +1,8 @@
 Aavco::Application.routes.draw do
+  get "current_events/new"
+
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
   resources :codes
 
   resources :cities
@@ -12,8 +16,6 @@ Aavco::Application.routes.draw do
   resources :calculators
 
   resources :forms
-
-  resources :events
 
   resources :meetings
 
