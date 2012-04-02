@@ -1,0 +1,13 @@
+<%= render 'layouts/stylesheets' %>
+</br></br>
+
+<table class='pagetext'>
+	<% @currentevents.each do |currentevents| %>
+		<tr>
+			<td class='pagetitle'><%=raw currentevents.title %></td>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%=raw currentevents.page_text %></td>
+		</tr>
+	<% end %>
+</table>

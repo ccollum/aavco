@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'layouts/stylesheets' %>
+</br></br>
+
+<table class='pagetext'>
+		<tr>
+			<td class='pagetitle'><%= raw @contact.title %></td>
+		</tr>
+		</tr>
+		<tr></tr><tr></tr>
+			<td class='pagetext'><%= raw @contact.page_text %></td>
+		</tr>
+</table>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
