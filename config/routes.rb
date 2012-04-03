@@ -1,6 +1,7 @@
 Aavco::Application.routes.draw do
-  get "current_events/new"
+  resources :current_events
 
+	root :to => 'homes#index'
 	match '/' => 'homes#index'
 	match 'about' => 'about_aas#index'
 	match 'guidelines' => 'guidelines#index'
@@ -9,6 +10,9 @@ Aavco::Application.routes.draw do
 	match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 	match 'events' => 'current_events#index'
 	match 'forms' => 'forms#index'
+	match 'Blank_Update_Form.pdf' => "forms#Blank_Update_Form.pdf"
+	match 'Blank_Update_Form.rtf' => "forms#Blank_Update_Form.rtf"
+	
 	match 'calculator' => 'calculator#index'
 	match 'links' => 'links#index'
 	match 'contact' => 'contacts#index'

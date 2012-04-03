@@ -1,17 +1,16 @@
 <p id="notice"><%= notice %></p>
-
 <%= render 'layouts/stylesheets' %>
 </br></br>
 
 <table class='pagetext'>
 		<tr>
-			<td class='pagetitle'><%= raw @contact.title %></td>
+			<td class='pagetitle'><%= raw @current_event.title %></td>
 		</tr>
 		</tr>
 		<tr></tr><tr></tr>
-			<td class='pagetext'><%= raw @contact.page_text %></td>
+			<td class='pagetext'><%= raw @current_event.page_text %></td>
 		</tr>
 </table>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<%= link_to 'Edit', edit_current_event_path(@current_event) %> |
+<%= link_to 'Back', current_events_path %>

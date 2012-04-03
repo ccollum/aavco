@@ -1,25 +1,26 @@
-<%= form_for(@contact) do |f| %>
-  <% if @contact.errors.any? %>
+<%= form_for(@current_event) do |f| %>
+  <% if @current_event.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= pluralize(@current_event.errors.count, "error") %> prohibited this current_event from being saved:</h2>
 
       <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
+      <% @current_event.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-	<div class="pagetitle" width=100%>
-		<%= f.text_field :title %>
+div class="pagetitle" width=100%>
+	<%= f.text_field :title %>
+</div>
+<div class="pagetext" width=100%>
+ 	<br />
+	<%= f.text_area :page_text, :class=>"tinymce", :rows=>100, :cols=>300 %>
+	<%= tinymce %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
 	</div>
-	<div class="pagetext" width=100%>
-		<br />
-		<%= f.text_area :page_text, :class=>"tinymce", :rows=>100, :cols=>300 %>
-		<%= tinymce %>
-	</div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
